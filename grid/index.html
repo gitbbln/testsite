@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>SVG Full Size Grid</title>
+    <script type="text/javascript" src="../common/js/bowser.js"></script>
+    <script type="text/javascript" src="../common/js//highlight.pack.js"></script>
+    <script type="text/javascript" src="../common/js/highlightCode.js"></script>
+    <link href='../common/css/highlight.css' rel='stylesheet' />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body style='overflow:hidden;font-family:arial'>
+    <div id="svgDiv" style='position:absolute;top:0px;left:0px;width:100%;height:100%'>
+        <svg id="mySVG" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#smallGrid)"/>
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+</svg>
+    </div>
+    <div style='width:90%;position:absolute;top:200px'>
+        <center>
+            <h4>Full Page SVG Grid</h4>
+        </center>
+        <div style='width:90%;background-color:gainsboro;text-align:justify;padding:10px;border-radius:6px;'>
+            This example creates a full size 'grid' SVG background to the HTML web page. The svg is inline contained within a div style='position:absolute;top:0px;left:0px;width:100%;height:100%'
+
+        </div>
+        <br />SVG Source:
+        <center>
+            <div id=svgSourceDiv style=overflow:auto;width:80%;height:1px;text-align:left; /></div>
+    </center>
+    </div>
+    <div id='browserDiv' style='padding:5px;position:absolute;top:5px;left:5px;background-color:gainsboro;'>OK in:IE11/CH41/FF35<br /></div>
+
+
+    <script>
+        document.addEventListener("onload", init(), false)
+
+        function init() {
+            browserVersion()
+            showSourceSVG()
+
+
+
+        }
+
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-88028738-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
