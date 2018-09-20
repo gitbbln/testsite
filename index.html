@@ -68,7 +68,7 @@
     <p>Click on the button to open the dropdown menu.</p>
 
     <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <button onclick="myFunction('myDropdown')" class="dropbtn">Dropdown</button>
         <div id="myDropdown" class="dropdown-content">
             <a href="/grid/index.html">grid</a>
             <a href="/clocks/dclock.html">digital clock</a>
@@ -88,12 +88,32 @@
             <a href="/..">...</a>
         </div>
     </div>
+    <div class="dropdown">
+        <button onclick="myFunction('myDropdown2')" class="dropbtn">Dropdown</button>
+        <div id="myDropdown2" class="dropdown-content">
+            <a href="/SVG/3dneon-svg.html">3dneon-svg</a>
+            <a href="/SVG/copperplate-svg.html">copperplate-svg</a>
+            <a href="/SVG/clock/extruded-svg.html">extruded-svg</a>
+            <a href="/SVG/pop-svg.html">pop-svg</a>
+            <a href="/SVG/sketchy-svg.html">sketchy-svg</a>
+            <a href="/SVG/splash-svg.html">splash-svg</a>
+            <a href="/SVG/weathered-svg.html">weathered-svg</a>
+            <a href="/html/3dneon-html.html">3dneon-html</a>
+            <a href="/html/copperplate-html">copperplate-html</a>
+            <a href="/html/weathered-html.html">weathered-html</a>
+            <a href="/html/splash-html.html">splash-html</a>
+            <a href="/html/sketchy-html.html">sketchy-html</a>
+            <a href="/html/pop-html.html">pop-html</a>
+            <a href="/html/extruded-html.html">extruded-html</a>
+            <a href="/..">...</a>
+        </div>
+    </div>
 
     <script>
         /* When the user clicks on the button, 
                                                                                                                                 toggle between hiding and showing the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
+        function myFunction(s) {
+            document.getElementById(s).classList.toggle("show");
         }
 
         // Close the dropdown if the user clicks outside of it
